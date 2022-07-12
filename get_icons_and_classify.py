@@ -49,7 +49,7 @@ def string2image(byte_array, client_ip):
 
 # 사이트에서 첫 페이지에 있는 모든 이미지 링크 가져오기
 def image_urls(result_class):
-    url = f'https://www.flaticon.com/search?word={result_class}'
+    url = (seach result for result_class in icon site)
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'lxml')
 
@@ -60,8 +60,6 @@ def image_urls(result_class):
         link = img['data-src']
 
         link += 'URL'
-        # crawled = base64.b64encode(requests.get(url).content)
-        # print(crawled)
         images.append(link)
 
     # images[-1] += 'END'
